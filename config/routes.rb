@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :rooms
   devise_for :contorollers
   devise_for :users
   get 'messages/index'
