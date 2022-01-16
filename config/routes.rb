@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :rooms
-  devise_for :contorollers
   devise_for :users
-  get 'messages/index'
- root to: "messages#index"
- resources :users, only: [:edit, :update,:create,]
- resources :rooms, only: [:new, :create]
+  root to: "rooms#index"
+  resources :users, only: [:edit, :update]
+  resources :rooms, only: [:new, :create]
 end
